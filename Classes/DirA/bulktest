@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# the function usageGuide prints the guide on -h (help) option input
+# also used if no options are given, or if options are used incorrectly
+usageGuide() {
+	echo "Usage guide for script"
+	echo "Sample: namechange -f find -r replace 'sample file.txt'."
+	printf "\t-f pattern to find in file name\n"
+	printf "\t-r pattern to replace in file name\n"
+	echo "final arg = file to fix errors in"
+}
+
+# getopts OPTSTRING VARNAME
+# OPTSTRING - tells getopts which options to expect and where to expect arguments
+# VARNAME - tells getopts which shell-variable to use for option reporting
+while getopts ":hf:r:" opt; do
+	# echo "OPTARG = $OPTARG = which argument is being looked at"
+	# echo "OPTIND = $OPTIND = which index of argument is being looked at"
+	# switch (case) statement finds matching cases based on value in opt variable
+	case $opt in
+	h)
+		echo "h was given, printing help"
+		usageGuide
+		exit
+		;;
+	f)
+		# this option should be followed by an argument pattern to find in the filename
+		pattern=$OPTARG
+		;;
+	r)
+		# this option should be followed by an argument of what to replace the found pattern with
+		replace=$OPTARG
+		;;
+	\?)
+		# this is for incorrect inputs
+		echo "Invalid option: -$OPTARG" >&2
+		;;
+	esac
+done
+
+shift $((OPTIND-1))
+
+if [[ -z pattern ]]; then
+	echo "No pattern given to search for"
+	usageGuide
+	exit
+elif [[ -z replace ]]; then
+	echo "No value given to replace"
+	usageGuide
+	exit
+fi
+
+ext=$@
+
+for i in *"$ext"; do
+	mv "$i" "$(echo "$i" | sed "s/$pattern/$replace/g")"
+done
